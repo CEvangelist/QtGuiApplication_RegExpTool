@@ -14,22 +14,21 @@ void QtGuiApplication1::handleFindButtonClicked ()
     ui.textBrowser_result->clear();
     QString patStr = ui.plainTextEdit_pattern->toPlainText();
     QString srcStr = ui.plainTextEdit_source->toPlainText();
+    qDebug() << srcStr;
+    QStringList srcLst;
+    for (QString x : srcStr.split(QString('\n'))) srcLst.append(x);
     // problems below
     QRegExp rx(patStr);
-    rx.indexIn(srcStr, 2);
-    qDebug() << rx.capturedTexts();
-    qDebug() << rx.matchedLength();
 
     QStringList lst;
     int pos = 0;
 
-    while ((pos = rx.indexIn(srcStr, pos)) != -1)
+    for (QString x : srcLst)
     {
-      lst << rx.capturedTexts();
-      pos += rx.matchedLength();
+        if (rx.exactMatch(x)) lst.append(x);
     }
 
     for (QString x : lst) {
-      ui.textBrowser_result->insertHtml(x + QString("<br>"));
+        ui.textBrowser_result->insertHtml(x + QString("<br>"));
     }
 }
