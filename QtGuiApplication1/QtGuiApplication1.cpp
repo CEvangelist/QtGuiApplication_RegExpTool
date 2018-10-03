@@ -14,7 +14,8 @@ void QtGuiApplication1::handleFindButtonClicked ()
     ui.textBrowser_result->clear();
     QString patStr = ui.plainTextEdit_pattern->toPlainText();
     QString srcStr = ui.plainTextEdit_source->toPlainText();
-    qDebug() << srcStr;
+    qDebug() << "patStr: " << patStr;
+    qDebug() << "srcStr: " << srcStr;
     QStringList srcLst;
     for (QString x : srcStr.split(QString('\n'))) srcLst.append(x);
     // problems below
