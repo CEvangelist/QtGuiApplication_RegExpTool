@@ -12,14 +12,17 @@ void QtGuiApplication1::handleFindButtonClicked ()
 {
     qDebug() << "buttonClicked";
     ui.textBrowser_result->clear();
+
     QString patStr = ui.plainTextEdit_pattern->toPlainText();
     QString srcStr = ui.plainTextEdit_source->toPlainText();
     qDebug() << "patStr: " << patStr;
     qDebug() << "srcStr: " << srcStr;
+
     QStringList srcLst;
     for (QString x : srcStr.split(QString('\n'))) srcLst.append(x);
-    // problems below
+
     QRegExp rx(patStr);
+    qDebug() << "rx: " << rx.pattern();
 
     QStringList lst;
     int pos = 0;
