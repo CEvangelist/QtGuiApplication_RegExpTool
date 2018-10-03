@@ -7,7 +7,7 @@ A demo of QtWidget that checks regular expression.
 
 1. Visual Studio with Qt VS Tools, MSVC2015 x64
 
-2. Qt Creator with Qt 5.11.1 (Assume Qt 5.11.1 is the latest stable version)
+2. Qt Creator with Qt 5.11.1 (Assume that Qt 5.11.1 is the latest stable version)
 
 ## Deployment Environment
 
