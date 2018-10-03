@@ -17,7 +17,7 @@ A demo of QtWidget that checks regular expression.
 
 1. Open QtGuiApplication1.sln with Visual Studio and release by debugger.
 
-2. Open powershell in the solutionDir/x64/Release, and then run command before execute QtGuiApplication1.exe:
+2. Open powershell in solutionDir/x64/Release, and then run command before execute QtGuiApplication1.exe:
 
 ```powershell
 windeployqt.exe .\QtGuiApplication1.exe
