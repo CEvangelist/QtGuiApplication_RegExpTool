@@ -22,3 +22,7 @@ A demo of QtWidget that checks regular expression.
 ```powershell
 windeployqt.exe .\QtGuiApplication1.exe
 ```
+
+## Known Issues
+
+1. Each line user have to make exact RegExp pattern to match.
